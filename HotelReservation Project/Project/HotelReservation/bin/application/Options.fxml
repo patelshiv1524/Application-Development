@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+
+<VBox fx:id="vboxOptions" alignment="CENTER" spacing="30" style="-fx-background-color: linear-gradient(to bottom, #3a6186, #89253e); -fx-padding: 50;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.SelectionController">
+   <children>
+       
+       <!-- Title -->
+       <Label alignment="CENTER" style="-fx-text-fill: #ffffff; -fx-font-size: 36px; -fx-font-weight: bold;" text="Welcome to Patel Hotel">
+           <VBox.margin>
+               <Insets bottom="30" top="20" />
+           </VBox.margin>
+       </Label>
+       
+       <!-- Buttons Section -->
+       <VBox alignment="CENTER" spacing="20">
+          <children>
+              <!-- Guest Booking Button -->
+              <Button fx:id="btnGuestBooking" onAction="#handleGuestBooking" style="-fx-background-color: #ff6f61; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 10;" text="Guest Self Booking">
+                  <effect>
+                      <DropShadow color="#00000088" offsetX="0" offsetY="5" radius="15" />
+                  </effect>
+              </Button>
+              
+              <!-- Admin Login Button -->
+              <Button fx:id="btnAdminLogin" onAction="#handleAdminLogin" style="-fx-background-color: #333333; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 10;" text="Admin Login">
+                  <effect>
+                      <DropShadow color="#00000088" offsetX="0" offsetY="5" radius="15" />
+                  </effect>
+              </Button>
+          </children>
+       </VBox>
+       
+       <!-- Footer or additional info can go here -->
+       <Label alignment="CENTER" style="-fx-text-fill: #e0e0e0; -fx-font-size: 16px;" text="Experience luxury at its finest">
+           <VBox.margin>
+               <Insets top="40" />
+           </VBox.margin>
+       </Label>
+   </children>
+</VBox>

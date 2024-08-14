@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.paint.Color?>
+
+<VBox fx:id="vboxWelcomeKiosk" alignment="CENTER" maxHeight="600" minHeight="445.0" prefHeight="445.0" prefWidth="667.0" spacing="40" style="-fx-padding: 50; -fx-background-color: linear-gradient(to bottom, #3a6186, #89253e);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.KioskController">
+   <children>
+       
+       <!-- Title Text -->
+       <Text style="-fx-font-size: 28; -fx-fill: #ffffff; -fx-font-weight: bold; -fx-effect: dropshadow(one-pass-box, black, 5, 0.3, 0, 2);" text="Welcome to Patel Hotel Self Booking Kiosk" />
+       
+       <!-- Subtitle Text -->
+       <Text style="-fx-font-size: 20; -fx-fill: #e0e0e0;" text="We strive to provide you the best experience." />
+       
+       <!-- Get Started Button -->
+       <Button fx:id="btnGetStarted" onAction="#handleGetStarted" style="-fx-background-color: #ff6f61; -fx-text-fill: #FFFFFF; -fx-font-weight: bold; -fx-padding: 15 30; -fx-font-size: 18; -fx-background-radius: 10;" text="Get Started">
+           <effect>
+               <DropShadow color="#00000088" offsetX="0" offsetY="5" radius="10" />
+           </effect>
+       </Button>
+   </children>
+    
+</VBox>

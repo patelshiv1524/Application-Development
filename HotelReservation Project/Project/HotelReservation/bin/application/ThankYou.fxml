@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.effect.DropShadow?>
+
+<VBox alignment="CENTER" spacing="30.0 " style="-fx-background-color: linear-gradient(to bottom, #3a6186, #89253e); -fx-padding: 40px; -fx-border-radius: 10px; -fx-background-radius: 10px;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.BookARoom">
+   <children>
+       <!-- Confirmation Message -->
+       <Text style="-fx-font-size: 24pt; -fx-fill: #ffffff; -fx-font-weight: bold;" text="Thank you for booking with Patel Hotel" />
+       
+       <!-- Booking Details -->
+       <Text fx:id="confirmationDetails" style="-fx-font-size: 18pt; -fx-fill: #ffffff;" text="Your room is successfully booked." />
+       
+       <!-- Close Button -->
+       <Button onAction="#handleClose" style="-fx-font-size: 16pt; -fx-background-color: #ff6f61; -fx-text-fill: #FFFFFF; -fx-padding: 10px 20px; -fx-background-radius: 10px;" text="Close">
+           <effect>
+               <DropShadow color="#00000088" offsetX="0" offsetY="2" radius="5" />
+           </effect>
+       </Button>
+   </children>
+</VBox>

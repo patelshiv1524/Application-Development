@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.effect.DropShadow?>
+
+<AnchorPane prefHeight="460.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom, #3a6186, #89253e);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.BillServiceController">
+   
+   <children>
+      <!-- Title Label -->
+      <Label layoutX="34.0" layoutY="23.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Billing Service" textFill="#ffffff" />
+
+      <!-- GridPane for Billing Details -->
+      <GridPane layoutX="29.0" layoutY="59.0" prefHeight="343.0" prefWidth="544.0" style="-fx-background-color: #333333; -fx-padding: 20px; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+         <columnConstraints>
+            <ColumnConstraints prefWidth="200.0" />
+            <ColumnConstraints prefWidth="320.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints prefHeight="45.0" vgrow="ALWAYS" />
+            <RowConstraints prefHeight="45.0" vgrow="ALWAYS" />
+            <RowConstraints prefHeight="45.0" vgrow="ALWAYS" />
+            <RowConstraints prefHeight="45.0" vgrow="ALWAYS" />
+            <RowConstraints prefHeight="45.0" vgrow="ALWAYS" />
+            <RowConstraints prefHeight="45.0" vgrow="ALWAYS" />
+            <RowConstraints prefHeight="45.0" vgrow="ALWAYS" />
+         </rowConstraints>
+         <children>
+            <Label text="Booking ID:" textFill="#ffffff" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label text="Guest Name:" textFill="#ffffff" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label text="No. of rooms booked:" textFill="#ffffff" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Label text="Type of rooms:" textFill="#ffffff" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <Label text="Rate per night:" textFill="#ffffff" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <Label text="Discount (%):" textFill="#ffffff" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <Label text="Total Amount:" textFill="#ffffff" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            
+            <TextField fx:id="bookingId" editable="false" style="-fx-background-color: #555555; -fx-text-fill: #ffffff; -fx-border-radius: 5px;" GridPane.columnIndex="1" />
+            <TextField fx:id="GuesName" editable="false" style="-fx-background-color: #555555; -fx-text-fill: #ffffff; -fx-border-radius: 5px;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="nunmRooms" editable="false" style="-fx-background-color: #555555; -fx-text-fill: #ffffff; -fx-border-radius: 5px;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="typeOfRooms" editable="false" style="-fx-background-color: #555555; -fx-text-fill: #ffffff; -fx-border-radius: 5px;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="Rate" editable="false" style="-fx-background-color: #555555; -fx-text-fill: #ffffff; -fx-border-radius: 5px;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="Discount" style="-fx-background-color: #555555; -fx-text-fill: #ffffff; -fx-border-radius: 5px;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="TotalAmount" editable="false" style="-fx-background-color: #555555; -fx-text-fill: #ffffff; -fx-border-radius: 5px;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+
+      <!-- Confirm Button -->
+      <Button layoutX="521.0" layoutY="411.0" mnemonicParsing="false" onAction="#confirm" style="-fx-background-color: #ff6f61; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10px;" text="Confirm">
+         <effect>
+            <DropShadow color="#00000088" offsetX="0" offsetY="2" radius="5" />
+         </effect>
+      </Button>
+      
+      <!-- Cancel Button -->
+      <Button layoutX="447.0" layoutY="411.0" mnemonicParsing="false" onAction="#cancel" style="-fx-background-color: #999999; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10px;" text="Cancel">
+         <effect>
+            <DropShadow color="#00000088" offsetX="0" offsetY="2" radius="5" />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

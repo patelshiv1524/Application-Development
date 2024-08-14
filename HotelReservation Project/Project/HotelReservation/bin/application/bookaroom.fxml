@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="587.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.BookARoom" style="-fx-background-color: linear-gradient(to bottom, #3a6186, #89253e);">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Book A Room" textFill="#ffffff" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+      <Label layoutX="37.0" layoutY="65.0" text="No of Guests:" textFill="#e0e0e0" />
+      <Button layoutX="37.0" layoutY="121.0" mnemonicParsing="false" onAction="#showAvailableRooms" text="Show Available Rooms" style="-fx-background-color: #ff6f61; -fx-text-fill: #ffffff; -fx-font-weight: bold;" />
+      <Button layoutX="327.0" layoutY="121.0" mnemonicParsing="false" onAction="#selectRoom" text="Select Room" style="-fx-background-color: #ff6f61; -fx-text-fill: #ffffff; -fx-font-weight: bold;" />
+      
+      <!-- Keeping TableView components as they are, without additional styling -->
+      <TableView fx:id="available" layoutX="51.0" layoutY="164.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="Room No." />
+          <TableColumn fx:id="type" prefWidth="75.0" text="Type" />
+          <TableColumn fx:id="price" prefWidth="75.0" text="Price/day" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      
+      <TableView fx:id="selected" layoutX="327.0" layoutY="164.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="sid" prefWidth="75.0" text="Room No." />
+          <TableColumn fx:id="stype" prefWidth="75.0" text="Type" />
+          <TableColumn fx:id="sprice" prefWidth="75.0" text="Price/day" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      
+      <Label layoutX="37.0" layoutY="390.0" text="Number of days to be booked for:" textFill="#e0e0e0" />
+      <Label layoutX="37.0" layoutY="441.0" text="Rate to be offered/day:" textFill="#e0e0e0" />
+      <TextField fx:id="num_guest" layoutX="294.0" layoutY="61.0" />
+      <TextField fx:id="num_days" editable="false" layoutX="294.0" layoutY="386.0" />
+      <TextField fx:id="rate" editable="false" layoutX="294.0" layoutY="437.0" />
+      <Button layoutX="477.0" layoutY="548.0" mnemonicParsing="false" onAction="#next" text="Next" style="-fx-background-color: #ff6f61; -fx-text-fill: #ffffff; -fx-font-weight: bold;" />
+      <Button layoutX="528.0" layoutY="548.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" style="-fx-background-color: #ff6f61; -fx-text-fill: #ffffff; -fx-font-weight: bold;" />
+      <Label layoutX="37.0" layoutY="484.0" text="Check In Date" textFill="#e0e0e0" />
+      <Label layoutX="251.0" layoutY="484.0" text="Check Out Date" textFill="#e0e0e0" />
+      <DatePicker fx:id="checkin" layoutX="30.0" layoutY="504.0" />
+      <DatePicker fx:id="checkout" layoutX="240.0" layoutY="504.0" />
+   </children>
+</AnchorPane>

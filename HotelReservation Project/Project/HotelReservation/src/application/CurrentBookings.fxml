@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.ColumnConstraints?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.BookedRoomsController" style="-fx-background-color: linear-gradient(to bottom, #3a6186, #89253e);">
+   <children>
+      <Label layoutX="34.0" layoutY="23.0" text="Customer Information" textFill="#333333" style="-fx-font-size: 18px;" />
+      <TableView fx:id="BookedRooms" layoutX="30.0" layoutY="100.0" prefHeight="300.0" prefWidth="590.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="Booking Id" />
+          <TableColumn fx:id="custname" prefWidth="103.0" text="Customer Name" />
+          <TableColumn fx:id="roomType" prefWidth="150.0" text="Room Type" />
+          <TableColumn fx:id="numRoom" prefWidth="100.0" text="No. of Rooms" />
+          <TableColumn fx:id="numDays" prefWidth="150.0" text="No. Of Days" />
+        </columns>
+      </TableView>
+      <Label layoutX="30.0" layoutY="52.0" text="No. of current Bookings are: " textFill="#333333" />
+      <Label fx:id="numBooked" layoutX="230.0" layoutY="52.0" text="0" textFill="#333333" />
+      <HBox layoutX="30.0" layoutY="410.0" spacing="10.0">
+        <children>
+            <TextField fx:id="searchField" prefWidth="200.0" promptText="Search by Name"/>
+            <Button text="Search" onAction="#searchBooking" style="-fx-background-color: #333333; -fx-text-fill: #ffffff;" />
+            <Button text="Delete Selected" onAction="#deleteBooking" style="-fx-background-color: #333333; -fx-text-fill: #ffffff;" />
+            <Button text="Close" onAction="#close" style="-fx-background-color: #333333; -fx-text-fill: #ffffff;" />
+        </children>
+        <padding>
+            <Insets bottom="10.0" left="0.0" right="10.0" top="10.0" />
+        </padding>
+      </HBox>
+   </children>
+</AnchorPane>
